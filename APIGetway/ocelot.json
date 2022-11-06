@@ -1,0 +1,70 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/product/getProdects",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product/search"
+    },
+    {
+      "UpstreamPathTemplate": "/api/product/getProdect/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product/detail/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/product/add",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product/create"
+    },
+    {
+      "UpstreamPathTemplate": "/api/product/remove/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product/delete/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/product/edit/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product/update/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7021"
+  }
+}
